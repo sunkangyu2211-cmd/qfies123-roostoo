@@ -1,0 +1,89 @@
+{
+  "selected_strategy": "macd",
+  "composite_score": 6.848151295992325,
+  "total_return": 0.15169389389438462,
+  "backtest_days": 60,
+  "capital": 1000000.0,
+  "all_rankings": [
+    {
+      "name": "macd",
+      "score": 6.848151295992325,
+      "return": 0.15169389389438462
+    },
+    {
+      "name": "trend_rider",
+      "score": 6.301050325429613,
+      "return": 0.16904283006444248
+    },
+    {
+      "name": "adx_trend",
+      "score": 5.605883701765595,
+      "return": 0.1434158254581401
+    },
+    {
+      "name": "ma_crossover",
+      "score": 5.397193525949155,
+      "return": 0.12226016066998849
+    },
+    {
+      "name": "breakout",
+      "score": 5.006531851823603,
+      "return": 0.13878867085144272
+    },
+    {
+      "name": "momentum_only",
+      "score": 3.5451216800273126,
+      "return": 0.09172360563474172
+    },
+    {
+      "name": "volatility_ensemble",
+      "score": 2.764290521461808,
+      "return": 0.06470862506347545
+    },
+    {
+      "name": "aggressive_rsi",
+      "score": 2.24247700009121,
+      "return": 0.023599190711928997
+    },
+    {
+      "name": "ensemble_majority",
+      "score": 0.6231314423278863,
+      "return": 0.005842128688836121
+    },
+    {
+      "name": "rsi_only",
+      "score": 0.394292106546118,
+      "return": 0.0034899692364449147
+    },
+    {
+      "name": "multi_signal",
+      "score": -1.260558914738157,
+      "return": -0.022088116110931616
+    },
+    {
+      "name": "ensemble_rsi_macd",
+      "score": -2.0075013369433288,
+      "return": -0.005831314562697779
+    },
+    {
+      "name": "bollinger_bands",
+      "score": -2.082144046978512,
+      "return": -0.05357181786607322
+    },
+    {
+      "name": "buy_and_hold",
+      "score": -2.4285236278755886,
+      "return": -0.07649849476314953
+    },
+    {
+      "name": "stochastic",
+      "score": -3.420061307554958,
+      "return": -0.09676301268260833
+    },
+    {
+      "name": "dip_buyer",
+      "score": -5.153644493689793,
+      "return": -0.13075448286524147
+    }
+  ]
+}
