@@ -1,0 +1,73 @@
+exchange:
+  base_url: "https://mock-api.roostoo.com"
+  poll_interval_seconds: 900        # 15 minutes between cycles
+  stale_order_minutes: 30           # Cancel limit orders older than this
+
+trading:
+  pairs:
+    - "TRUMP/USD"
+    - "FET/USD"
+    - "TAO/USD"
+    - "ZEC/USD"
+    - "CFX/USD"
+    - "WIF/USD"
+    - "EIGEN/USD"
+    - "PEPE/USD"
+  max_position_pct: 0.15            # 15% per coin (8 coins = 120% max exposure)
+  stop_loss_pct: 0.07               # Wider stop for volatile coins (7%)
+  kill_switch_drawdown: 0.20        # More room before kill switch (20%)
+  kill_switch_pause_minutes: 120    # Shorter cooldown (2 hours)
+  min_trade_usd: 10.0
+  limit_offset_pct: 0.003           # Wider limit offset for volatile coins
+
+strategy:
+  # Original strategy params
+  rsi_period: 14
+  rsi_oversold: 35
+  rsi_overbought: 65
+  ema_fast: 12
+  ema_slow: 26
+  momentum_threshold_pct: 2.0
+  min_signal_score: 2
+
+  # Breakout strategy params
+  breakout_channel_period: 20
+  breakout_atr_period: 14
+  breakout_atr_multiplier: 1.5
+  breakout_volume_surge: 1.3
+
+  # Aggressive RSI params
+  aggressive_rsi_period: 10
+  aggressive_rsi_oversold: 25
+  aggressive_rsi_overbought: 75
+  aggressive_roc_period: 5
+  aggressive_roc_threshold: 0.5
+
+  # Trend rider params
+  trend_ema_fast: 8
+  trend_ema_medium: 21
+  trend_ema_slow: 50
+  trend_adx_period: 14
+  trend_adx_threshold: 20
+  trend_volume_ma: 20
+
+  # Dip buyer params
+  dip_bb_period: 20
+  dip_bb_std: 2.0
+  dip_trend_ema: 50
+  dip_rsi_period: 14
+  dip_rsi_threshold: 35
+
+data:
+  ohlcv_interval: "1h"
+  ohlcv_limit: 100
+  cache_ttl_seconds: 300
+
+logging:
+  log_file: "logs/trades.jsonl"
+  log_level: "INFO"
+  snapshot_interval_minutes: 60
+  max_log_size_mb: 50
+
+state:
+  positions_file: "state/positions.json"
